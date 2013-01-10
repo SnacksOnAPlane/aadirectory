@@ -1,0 +1,31 @@
+<h1>New Member</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@member) do |f| %>
+
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name %>
+
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name %>
+
+      <%= f.label :child_names %>
+      <%= f.text_field :child_names %>
+
+      <%= f.label :address %>
+      <%= f.text_area :address, :size => "50x3" %>
+
+      <%= f.label :home_phone %>
+      <%= f.text_field :home_phone %>
+
+      <%= f.label :work_phone %>
+      <%= f.text_field :work_phone %>      
+
+      <%= f.label :cell_phone %>
+      <%= f.text_field :cell_phone %> 
+
+      <%= f.submit "Add member", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

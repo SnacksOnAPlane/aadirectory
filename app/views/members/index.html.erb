@@ -1,0 +1,13 @@
+<%= alpha_pagination %>
+<ul class="members">
+  <% @members.each do |member| %>
+    <li>
+      <span class="name"><%= member.last_name %>, <%= member.first_name %></span>
+      <div class="address"><%= member.address %></div>
+      <% if !member.home_phone.nil? %>
+      <span class="phone">Home: <%= member.home_phone %></span>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+<%= alpha_pagination %>
